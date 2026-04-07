@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card p-4 shadow">
+            <h4 class="mb-3 text-warning">✏️ Edit Entry</h4>
+            <p class="text-muted">Editing entry for <strong>{{ entry.farmer.username }}</strong> on {{ entry.date }}</p>
+            
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label>Change Date</label>
+                    {{ form.date }}
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label>Milk Type</label>
+                        {{ form.milk_type }}
+                    </div>
+                    <div class="col">
+                        <label>Shift</label>
+                        {{ form.shift }}
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label>Fat Content</label>
+                        {{ form.fat }}
+                    </div>
+                    <div class="col">
+                        <label>Quantity (L)</label>
+                        {{ form.quantity }}
+                    </div>
+                </div>
+                
+                <div class="alert alert-warning small">
+                    Note: Changing values here will automatically recalculate the Total Amount based on current rates.
+                </div>
+
+                <div class="d-flex gap-2">
+                    <a href="{% url 'admin_dashboard' %}" class="btn btn-secondary flex-grow-1">Cancel</a>
+                    <button type="submit" class="btn btn-primary flex-grow-1">Update & Recalculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
