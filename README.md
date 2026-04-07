@@ -59,6 +59,9 @@ CSS / Bootstrap	UI styling
 SQLite	Database
 Django Authentication	Login system
 
+
+
+
 ----------------------------------------------------
 🗂️ Project Structure
 milkproject/
@@ -89,6 +92,9 @@ milkproject/
 └── requirements.txt
 
 ----------------------------------------------------------
+
+
+
 🗃️ Database Models
 User
 Custom user model extending Django authentication.
@@ -128,7 +134,7 @@ updated_at	Last updated time
 Follow these steps to run the project locally.
 
 1️⃣ Clone Repository
-git clone https://github.com/yourusername/milk-collection-system.git
+git clone [https://github.com/yourusername/milk-collection-system.git](https://github.com/SanskarNarkar/Milk_Pay.git)
 cd milk-collection-system
 
 2️⃣ Create Virtual Environment
